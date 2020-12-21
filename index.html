@@ -395,16 +395,15 @@
                 </li>
             </ul>
         </div>
+        <form action="#" class="form-subsc">
+            <p class="form-subsc-title">Подпишитесь на рассылку</p>
+            <input type="email" name="user-mail" class="form-subsc-mail" placeholder="E-mail">
+        </form>
+        <div><button type="submit" class="subsc-btn">Подписаться</button></div>
+    </footer>
     </div>
-    <form action="#" class="form-subsc">
-        <p class="form-subsc-title">Подпишитесь на рассылку</p>
-        <input type="email" name="user-mail" class="form-subsc-mail" placeholder="E-mail">
-        <button type="submit" class="subsc-btn">Подписаться</button>
-    </form>
-</footer>
-
+   
 <!-- Backdrop -->
-
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
         <button class="modal-close-button">
@@ -416,25 +415,25 @@
                 Имя
                 <span class="modal-form-input-wrapper">
                     <input type="text" name="user-name" class="modal-form-input">
-                    <img class="modal-form-icon" src="./Images/modal-form/person-black.svg">
+                    <img class="modal-form-icon" src="">
                 </span>
             </label>
             <label class="modal-form-field">
                 Телефон
                 <input type="tel" name="user-tel" class="modal-form-input">
-                <img class="modal-form-icon" src="./Images/modal-form/phone-black.svg">
+                <img class="modal-form-icon" src="">
             </label>
             <label class="modal-form-field">
                 Почта
                 <input type="email" name="user-mail" class="modal-form-input">
-                <img class="modal-form-icon" src="./Images/modal-form/email-black.svg">
+                <img class="modal-form-icon" src="">
             </label>
             <label class="modal-form-field">
                 Комментарий
                 <textarea class="modal-form-message" name="user-message" placeholder="Введите текст"></textarea>
             </label>
             <input id="user-policy" type="checkbox" name="user-policy" value="accept-policy" class="modal-form-policy visually-hidden ">
-            <label for="user-policy" class="modal-form-policy-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="modal-form-policy-terms">Условия договора</a></label>
+            <label for="user-policy" class="modal-form-policy-text">Соглашаюсь с рассылкой и принимаю<a href="#" class="modal-form-policy-terms">Условия договора</a></label>
             <button type="submit" class="modal-form-btn">Отправить</button>
         </form>
         </div>

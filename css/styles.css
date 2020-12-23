@@ -547,6 +547,17 @@ li.address-list-item.first> a {
 
     color: #FFFFFF;
 }
+.modal-form-field-desc{
+    width: 25px;
+    height: 14px;
+    font-family: Roboto sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    padding-bottom: 4px;
+    color: #757575;
+}
+
 .form-subsc-mail{
     width: 358px;
     height: 50px;
@@ -556,6 +567,7 @@ li.address-list-item.first> a {
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     margin-top: 20px;
+    padding-left: 16px;
 }
 .subsc-btn{
     position: relative;
@@ -566,13 +578,13 @@ li.address-list-item.first> a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin-left: 12px;
+    padding-right: 29px;
     
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.06em;
-    padding: 10px 32px;
     cursor: pointer;
 
     color: #FFFFFF;
@@ -589,8 +601,8 @@ li.address-list-item.first> a {
     display: block;
     width: 24px;
     height: 24px;
-    margin-left: 28px;
-
+    margin-right: 15px;
+    
     background-image:url(../Images/send.svg);
     background-size: contain;
 }
@@ -662,6 +674,7 @@ f
 .modal-form-title{
     width: 448px;
     height: 23px;
+    margin-bottom: 12px;
     
     font-weight: bold;
     font-size: 20px;
@@ -679,10 +692,9 @@ f
     bottom: 16px;
     left: 12px;
     content:"";
-    width: 30px;
-    height: 30px;
-   
-
+    width: 29px;
+    height: 29px; 
+    padding-top: 2px; 
 }
 
 .modal-form{
@@ -701,7 +713,8 @@ f
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-    margin-bottom: 10px;  
+    padding-bottom: 10px; 
+    cursor: pointer; 
 }
 
 .modal-form-input:focus {
@@ -718,7 +731,7 @@ f
     height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     padding: 12px 16px;
-    margin-top: 4px;
+    padding-bottom: 20px;
     resize: none;
 }
 
@@ -734,49 +747,51 @@ f
     display: inline-block;
     width: 16px;
     height: 15px;
-    padding: 4px 2px 3px 3px;
-   
     content: "";
-     border: 2px solid #212121; 
+    border: 2px solid #212121; 
     margin-right: 7px;
     border-radius: 3px;
+   
 }
 
 .modal-form-policy:checked + .modal-form-policy-text::before{
     background-image: url(../Images/check.svg);
-    background-position: 0px 3px;
+    /* background-position: 0px 3px; */
     background-color: var(--accent-color);
     border: none;
     align-items: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 21px;
-    height: 22px;   
+    padding: 4px 3px 2px 3px;
+    width: 16px;
+    height: 15px;   
 }
 
 .modal-form-policy-text{
     width: 400px;
     height: 24px;
+    padding-left: 77px;
     
     font-family: Roboto sans-serif;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: #757575;
-
     margin-bottom: 30px;
+    
 }
 .modal-form-policy-terms{
     width: 400px;
     height: 24px;
-    
+    margin-left: 5px;
+
     font-family: Roboto sans-serif;
     font-size: 14px;
     line-height: 24px;
-    
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: #2196F3;
+    
 }
 
 .modal-form-btn{
@@ -795,6 +810,7 @@ f
     padding: 10px 55px;
     cursor: pointer;
     color: #FFFFFF;
+    cursor: pointer;
     
     transition-property: var(--accent-color);
     transition-duration: 250ms;

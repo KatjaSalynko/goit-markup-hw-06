@@ -478,6 +478,9 @@ li.address-list-item.first> a {
     margin-left: 20px;
     align-self: baseline;
 }
+.footer-container.join{
+    width:350px;
+} 
 
 .footer h4 {
     color: white;
@@ -532,8 +535,8 @@ li.address-list-item.first> a {
     margin-left: 70px;
 }
 .form-subsc{
-    margin-left: 93px;
     align-self: baseline;
+    margin-left: 93px;
 }
 .form-subsc-title{
     font-weight: bold;
@@ -555,6 +558,7 @@ li.address-list-item.first> a {
     margin-top: 20px;
 }
 .subsc-btn{
+    position: relative;
     display: block;
     width: 200px;
     height: 50px;
@@ -562,7 +566,6 @@ li.address-list-item.first> a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin-left: 12px;
-    padding-bottom: 100px;
     
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -577,10 +580,23 @@ li.address-list-item.first> a {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subsc-btn > .icon{
-   height: 20px;
-   width: 20px;
-   background-color: red;
+
+.subsc-btn::after{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 28px;
+
+    background-image:url(../Images/send.svg);
+    background-size: contain;
+}
+
+.footer-btn{
+    padding-top: 48px;
 }
 
 /* =========== END INFORMATION ============== */
@@ -598,7 +614,7 @@ li.address-list-item.first> a {
     transition-duration: 250ms ;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
-
+f
 .backdrop.is-hidden{
     transition-property: rgba(0, 0, 0, 0.2); 
     transition-duration: 250ms;
@@ -619,9 +635,6 @@ li.address-list-item.first> a {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
-
-    width: 528px;
-    height: 581px;
 
     background-color: #ffffff;
     border-radius: 4px;
@@ -646,19 +659,40 @@ li.address-list-item.first> a {
     cursor: pointer;
 }
 
+.modal-form-title{
+    width: 448px;
+    height: 23px;
+    
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #212121;
+}
+
+.modal-form-icon{
+    position: absolute;
+    display: block;
+    bottom: 16px;
+    left: 12px;
+    content:"";
+    width: 30px;
+    height: 30px;
+   
+
+}
+
 .modal-form{
     display: flex;
     flex-direction: column;
 }
 
 .modal-form-field{
-    margin-bottom: 10px;
-}
-
-.modal-form-input-wrapper{
     position: relative;
-    display: block;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .modal-form-input{
@@ -667,8 +701,7 @@ li.address-list-item.first> a {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;  
 }
 
 .modal-form-input:focus {
@@ -677,22 +710,7 @@ li.address-list-item.first> a {
 }
 
 .modal-form-input:focus + .modal-form-icon{
-    background-color: var(--accent-color);
-}
-
-.modal-form-icon{
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    display: block;
-    width: 18px;
-    height: 18px;
-    color: #212121;
-    transition-property: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 4px;
+    fill: var(--accent-color);
 }
 
 .modal-form-message{
@@ -712,26 +730,28 @@ li.address-list-item.first> a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-policy:checked + .modal-form-policy-text::before{
-    background-image: url(../Images/check.svg);
-    background-color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-
-}
-
 .modal-form-policy-text::before{
     display: inline-block;
     width: 16px;
     height: 15px;
+    padding: 4px 2px 3px 3px;
    
     content: "";
-    border: 2px solid #212121;
+     border: 2px solid #212121; 
     margin-right: 7px;
     border-radius: 3px;
+}
+
+.modal-form-policy:checked + .modal-form-policy-text::before{
+    background-image: url(../Images/check.svg);
+    background-position: 0px 3px;
+    background-color: var(--accent-color);
+    border: none;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 22px;   
 }
 
 .modal-form-policy-text{
@@ -746,7 +766,6 @@ li.address-list-item.first> a {
 
     margin-bottom: 30px;
 }
-
 .modal-form-policy-terms{
     width: 400px;
     height: 24px;
@@ -787,7 +806,7 @@ li.address-list-item.first> a {
         background-color: #2196F3;
         color: #FFFFFF;
     }
-
+    
 /* ============ END BACKDROP =============== */
 
 /* =========== PORTFOLIO ============== */

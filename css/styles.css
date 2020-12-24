@@ -770,13 +770,16 @@ f
 
 .modal-form-policy:checked + .modal-form-policy-text::before{
     background-image: url(../Images/check.svg);
-    /* background-position: 0px 3px; */
+     background-position: 0px 1px; 
     background-color: var(--accent-color);
     border: none;
     align-items: center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 4px 3px 2px 3px;
+    padding-left: 3px;
+    padding-right: 2px;
+    padding-top: 4px;
+    padding-bottom: 3px;
     width: 16px;
     height: 15px;   
 }
